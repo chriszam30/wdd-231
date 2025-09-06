@@ -20,6 +20,7 @@ body {
     line-height: 1.6;
     color: var(--primary-color);
     min-width: 320px;
+    background-color:silver;
 }
 
 /* Container for content */
@@ -28,6 +29,36 @@ body {
     padding: 0 var(--spacing-unit);
     margin: 0 auto;
 }
+
+
+header {
+    height: 100px; 
+    overflow: hidden; /
+}
+
+.logo {
+    width: 60px; 
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    top:20px
+}
+.burger-menu{
+    width: 30px; 
+    position: relative;
+    left: 300px;
+    bottom: 50px; 
+}
+.name{
+    color:blue;
+    margin-top: 0; 
+    position: relative;
+    bottom: 20px; 
+    left:80px;
+    font-weight: bold;
+    font-size: 1rem; 
+}
+
 
 /* Basic responsive images */
 img {
@@ -40,11 +71,15 @@ img {
 h1 {
     font-size: 1.75rem;
     margin-bottom: var(--spacing-unit);
+    text-align: left;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom: calc(var(--spacing-unit) * 0.75);
+    background-color: #333;
+    color:white;
+    text-align: center;
+    width: 300px;
 }
 
 h3 {
@@ -57,19 +92,86 @@ p {
 }
 
 /* Basic navigation for mobile */
+
+
 nav {
-    padding: var(--spacing-unit) 0;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul {
     list-style: none;
+    margin: 0; /* Added to ensure no margin */
+    padding: 0; /* Added to ensure no padding */
 }
 
 nav li {
-    margin-bottom: calc(var(--spacing-unit) * 0.5);
+   
+     background-color:#666;
+     border:1px solid black;
+    color:white;
+    padding: 10px;
+
 }
 
 nav a {
     text-decoration: none;
     color: var(--primary-color);
 }
+main{
+    margin: 0; /* Changed from margin: 25px */
+    padding: 25px; /* Added padding instead of margin to maintain spacing */
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+
+section .about-me,.image-me{
+    background-color: darkgrey;
+    height: 250px;
+    width: 300px;
+
+
+}
+section ul{
+    display: flex ;
+    gap:4px;
+    width: 300px;
+    justify-content: center;
+
+}
+section ul li, ol li{
+    margin: 10px;
+   background-color:antiquewhite;
+   padding: 5px 20px;
+   text-align: center;
+}
+section li {
+    list-style: none;
+    border-radius: 50px;
+}
+section ol{
+    width:300px;
+
+}
+.total-credits{
+    font-size: 14px;
+    text-align: center;
+}
+footer{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: burlywood;
+    width:100%;
+    height: 100px;
+}
+
