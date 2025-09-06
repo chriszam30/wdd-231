@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:  "Epunda Slab", serif;
     font-size: var(--font-base);
     line-height: 1.6;
     color: var(--primary-color);
@@ -46,7 +46,7 @@ header {
 .burger-menu{
     width: 30px; 
     position: relative;
-    left: 300px;
+    left: 290px;
     bottom: 50px; 
 }
 .name{
@@ -58,7 +58,15 @@ header {
     font-weight: bold;
     font-size: 1rem; 
 }
-
+.chris-image{
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    position: relative;
+    left: 50px;
+    bottom: 25px;
+    
+}
 
 /* Basic responsive images */
 img {
@@ -101,8 +109,8 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0; /* Added to ensure no margin */
-    padding: 0; /* Added to ensure no padding */
+    margin: 0; 
+    padding: 0; 
 }
 
 nav li {
@@ -111,6 +119,7 @@ nav li {
      border:1px solid black;
     color:white;
     padding: 10px;
+    display: hidden;
 
 }
 
@@ -118,23 +127,26 @@ nav a {
     text-decoration: none;
     color: var(--primary-color);
 }
+.menu-mobile{
+        display: none;
+
+}
 main{
-    margin: 0; /* Changed from margin: 25px */
-    padding: 25px; /* Added padding instead of margin to maintain spacing */
+    margin: 0; 
+    padding: 50px; 
 }
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
 }
 
 
 section .about-me,.image-me{
     background-color: darkgrey;
-    height: 250px;
     width: 300px;
 
 
@@ -173,5 +185,10 @@ footer{
     background-color: burlywood;
     width:100%;
     height: 100px;
+}
+section .about-me p {
+    text-align: center;
+
+    
 }
 
