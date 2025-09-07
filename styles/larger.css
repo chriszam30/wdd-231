@@ -1,6 +1,35 @@
 /* Larger screen styles - Mobile first approach */
+@media screen and (min-width: 768px) {
+    section .about-me,
+    .image-me {
+        width: 100%;
+        max-width: 800px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
 
-/* Medium screens (768px and up) */
+    .chris-image {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }    
+    
+    section .about-me p {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+/* Larger screens (768px and up) */
 @media screen and (min-width: 768px) {
     .container {
         max-width: 750px;
@@ -13,6 +42,7 @@
 
     h2 {
         font-size: 1.75rem;
+        width: 700px;
     }
 
     h3 {
@@ -33,31 +63,229 @@
     nav li:last-child {
         margin-right: 0;
     }
+    main {
+        margin: 0;
+    }
+
+    .sections-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 1rem;
+        padding: 0 2rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    section .about-me {
+        width: 95%;
+        line-height: 1.6;
+        margin: 0;
+        text-align: left;
+    }
+
+    .image-me {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .chris-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .student-image {
+        margin-bottom: 20px;
+    }
+
+    .certificates {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 800px;
+        padding: 2rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .certificates ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .certificates ol {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0;
+        margin-bottom: 1.5rem;
+        list-style-position: inside;
+    }
+
+    .total-credits {
+        font-size: 1.25rem;
+        color: #333;
+        padding: 1rem 0;
+        border-top: 1px solid #eee;
+        white-space: nowrap;
+        text-align: center;
+        width: 100%;
+    }
+    
+}
+
+section ul{
+    display: flex ;
+    gap:4px;
+    width: 300px;
+    justify-content: center;
+
+}
+section ul li, ol li{
+    margin: 10px;
+   background-color:antiquewhite;
+   text-align: center;
+}
+section li {
+    list-style: none;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 20px;
+}
+section ol{
+    width:500px;
+
+}
+.total-credits{
+    font-size: 40px;
+    text-align: center;
+    width: 800px;
+}   
+footer{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: burlywood;
+    width:100%;
+    height: 100px;
+}
+section .about-me p {
+    width: 500px;
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+
 }
 
 /* Large screens (1024px and up) */
 @media screen and (min-width: 1024px) {
     .container {
         max-width: 960px;
-    }
-
-    /* Typography adjustments */
-    body {
-        font-size: 1.1rem;
+        margin: 0 auto;
     }
 
     h1 {
-        font-size: 2.25rem;
+        width: 100%;
+        text-align: left;
+        margin: 1rem 2rem 2rem;
+    }
+
+    .sections-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 1rem;
+        padding: 0 2rem;
+    }
+
+    main section {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    main section h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+
+    .sections-container section:nth-child(3) {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     h2 {
-        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
-    h3 {
-        font-size: 1.75rem;
+    section .about-me {
+        width: 95%;
+        line-height: 1.6;
+        margin: 0;
+        text-align: left;
+        font-size: 1.25rem;
+    }
+    
+    .image-me {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .chris-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .chris-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: 2rem;
     }
 }
+
 
 /* Extra large screens (1280px and up) */
 @media screen and (min-width: 1280px) {

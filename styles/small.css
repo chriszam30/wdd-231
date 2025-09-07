@@ -32,13 +32,11 @@ body {
 
 
 header {
-    height: 100px; 
-    overflow: hidden; /
+    height: 100px;
 }
 
 .logo {
-    width: 60px; 
-    margin: 0;
+    width: 60px;
     padding: 5px;
     position: relative;
     top:20px
@@ -51,7 +49,6 @@ header {
 }
 .name{
     color:blue;
-    margin-top: 0; 
     position: relative;
     bottom: 20px; 
     left:80px;
@@ -59,13 +56,12 @@ header {
     font-size: 1rem; 
 }
 .chris-image{
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
-    position: relative;
-    left: 30px;
-    bottom: 10px;
-    
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Basic responsive images */
@@ -109,18 +105,13 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0; 
-    padding: 0; 
 }
 
 nav li {
-   
-     background-color:#666;
-     border:1px solid black;
+    background-color:#666;
+    border:1px solid black;
     color:white;
     padding: 10px;
-    display: hidden;
-
 }
 
 nav a {
@@ -144,14 +135,13 @@ section {
 }
 
 
-section .about-me,.image-me{
-    background-color: darkgrey;
-    width: 300px;
+section .about-me,
+.image-me {
+    width: 80%;
     font-size: 20px;
     text-align: center;
     padding: 20px;
-
-
+    margin: 0 auto;
 }
 .student-image{
     margin-bottom: 20px;
@@ -195,7 +185,5 @@ footer{
 }
 section .about-me p {
     text-align: center;
-
-    
 }
 
