@@ -1,38 +1,153 @@
-/* Larger screen styles - Mobile first approach */
+/* Tablet screens (768px and up) */
 @media screen and (min-width: 768px) {
-    section .about-me,
+    .sections-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .section-about,
+    .student-image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-about h2,
+    .student-image h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    section .about-me {
+        width: 100%;
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0 1rem;
+    }
+
     .image-me {
         width: 100%;
-        max-width: 800px;
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
+        max-width: 400px;
+        margin: 0;
+        padding: 0 1rem;
     }
 
     .chris-image {
-        max-width: 400px;
         width: 100%;
         height: auto;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }    
-    
-    section .about-me p {
-        margin: 0 auto;
-        padding: 0 20px;
     }
 
-    .menu-mobile {
+    /* Navigation styles for tablet */
+    .burger-menu {
         display: none;
     }
 
-/* Larger screens (768px and up) */
+    nav.menu-mobile {
+        display: block !important;
+        position: static;
+        background-color: #000;
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+
+    nav.menu-mobile ul {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        padding: 0.5rem 2rem;
+        background-color: #000;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav.menu-mobile li {
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    nav.menu-mobile li::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+    }
+
+    nav.menu-mobile li:hover::after {
+        width: 100%;
+    }
+
+    nav.menu-mobile li:hover {
+        opacity: 0.8;
+    }
+
+/* Tablet and up (768px and up) */
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 750px;
+    header {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        height: 90px;
+    }
+
+    .logo {
+        width: 80px;
+        position: static;
+        margin-right: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        position: static;
+        margin: 0;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    nav li:hover {
+        color: #0066cc;
     }
 
     /* Typography adjustments */
@@ -42,7 +157,8 @@
 
     h2 {
         font-size: 1.75rem;
-        width: 700px;
+        width: 100%;
+        max-width: 700px;
     }
 
     h3 {
@@ -65,13 +181,18 @@
     }
     main {
         margin: 0;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .sections-container {
         display: grid;
         grid-template-columns: 70% 30%;
         gap: 1rem;
-        padding: 0 2rem;
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     section {
@@ -178,9 +299,9 @@ section ol{
 
 }
 .total-credits{
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    width: 800px;
+    width: 600px;
 }   
 footer{
     display: flex ;
@@ -203,11 +324,118 @@ section .about-me p {
 
 }
 
-/* Large screens (1024px and up) */
+/* Desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
     .container {
-        max-width: 960px;
+        max-width: 1200px;
         margin: 0 auto;
+    }
+
+    header {
+        padding: 2rem 4rem;
+        justify-content: flex-start;
+        height: 150px;
+    }
+
+    .logo {
+        width: 120px;
+        margin-right: 2rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    /* Navigation styles for desktop */
+    nav.menu-mobile {
+        padding: 0.75rem 0;
+    }
+
+    nav.menu-mobile ul {
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 4rem;
+        padding: 0.5rem 2rem;
+    }
+
+    nav.menu-mobile li {
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+    }
+
+    nav.menu-mobile li::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+    }
+
+    nav.menu-mobile li:hover::after {
+        width: 100%;
+    }
+
+    nav.menu-mobile {
+        position: static;
+        display: block !important;
+        background-color: #000;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    nav.menu-mobile ul {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav.menu-mobile li {
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: white;
+        position: relative;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    nav.menu-mobile li::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s ease;
+    }
+
+    nav.menu-mobile li:hover {
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    nav.menu-mobile li:hover::after {
+        width: 100%;
+    }
+
+    nav.menu-mobile li.active {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    nav.menu-mobile li.active::after {
+        width: 100%;
     }
 
     h1 {
