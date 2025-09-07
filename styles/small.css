@@ -63,8 +63,8 @@ header {
     height: 300px;
     object-fit: contain;
     position: relative;
-    left: 50px;
-    bottom: 25px;
+    left: 30px;
+    bottom: 10px;
     
 }
 
@@ -133,14 +133,13 @@ nav a {
 }
 main{
     margin: 0; 
-    padding: 50px; 
+padding: 20px;
 }
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
 
 }
 
@@ -148,9 +147,16 @@ section {
 section .about-me,.image-me{
     background-color: darkgrey;
     width: 300px;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
 
 
 }
+.student-image{
+    margin-bottom: 20px;
+}
+
 section ul{
     display: flex ;
     gap:4px;
@@ -173,9 +179,10 @@ section ol{
 
 }
 .total-credits{
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
-}
+    width: 300px;
+}   
 footer{
     display: flex ;
     flex-direction: column;
