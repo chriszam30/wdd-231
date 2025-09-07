@@ -116,6 +116,35 @@
     }
 
 /* Tablet and up (768px and up) */
+/* Large screens (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .certificates {
+        padding: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .certificates ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        width: 800px;
+        margin-top: 2rem;
+    }
+
+    .certificates ol li {
+        flex: 1;
+    }
+
+    .certificates ul {
+        width: auto;
+        gap: 1rem;
+    }
+}
+
+/* Tablet (768px and up) */
 @media screen and (min-width: 768px) {
     header {
         display: flex;
