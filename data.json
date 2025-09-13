@@ -1,0 +1,19 @@
+{
+    "family_name": "Zambrano",
+    "moving_date": "10-17-2024",
+    "number_of_members": 2,
+    "is_visited_by_bishopric": true,
+    "information_of_members":[
+        {"name": "Christopher",
+        "gender": "male",
+        "birthdate": "09-13-2002"
+        },
+        { 
+        "name": "Emily",
+        "gender": "female",
+        "birthdate": "09-18-2002"
+
+        }
+    ]
+
+}
