@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quevedo Chamber of Commerce Directory</title>
+    <meta name="description" content="Resource hub for businesses in Quevedo. Find local events, networking, business directories, and support local economic growth.">
+    <meta name="author" content="Quevedo Chamber of Commerce">
+    <meta name="keywords" content="Quevedo, Chamber of Commerce, business directory, local events, networking, economic development, community, shop local">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Quevedo Chamber of Commerce Directory">
+    <meta property="og:description" content="Resource hub for businesses in Quevedo. Find local events, networking, business directories, and support local economic growth.">
+    <meta property="og:image" content="images/chamber-social.png">
+    <meta property="og:url" content="https://your-chamber-site-url.com/directory.html">
+    <link rel="stylesheet" href="./styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Quevedo Chamber Logo" height="48">
+            <span>Quevedo Chamber of Commerce</span>
+        </div>
+        <nav id="main-nav">
+            <button id="menu-toggle" aria-label="Open Menu">
+                <img src="../images/burger-menu.svg" alt="Menu">
+            </button>
+            <ul class="nav-list">
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="directory-controls">
+            <h1>Member Directory</h1>
+            <div class="view-toggle">
+                <button id="grid-view" aria-label="Grid View">Grid</button>
+                <button id="list-view" aria-label="List View">List</button>
+            </div>
+        </section>
+        <section id="members-container" class="grid-view">
+           
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p>Contact: info@quevedochamber.com | 555-0000 | 123 Chamber St, Quevedo</p>
+        </div>
+        <div class="footer-dev">
+            <p>Developed by Chris Zambrano| WDD 231</p>
+            <p>&copy; <span id="copyright-year"></span> | Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,19 +1,36 @@
 {
-    "family_name": "Zambrano",
-    "moving_date": "10-17-2024",
-    "number_of_members": 2,
-    "is_visited_by_bishopric": true,
-    "information_of_members":[
-        {"name": "Christopher",
-        "gender": "male",
-        "birthdate": "09-13-2002"
+    "members": [
+        {
+            "name": "Tech Solutions Inc",
+            "image": "images/members/tech-solutions.jpg",
+            "membershipLevel": "Gold",
+            "address": "123 Tech Avenue, Quevedo",
+            "phone": "(593) 5-123-4567",
+            "website": "https://techsolutions.example.com"
         },
-        { 
-        "name": "Emily",
-        "gender": "female",
-        "birthdate": "09-18-2002"
-
+        {
+            "name": "Green Farm Fresh",
+            "image": "images/members/green-farm.jpg",
+            "membershipLevel": "Silver",
+            "address": "456 Agro Road, Quevedo",
+            "phone": "(593) 5-234-5678",
+            "website": "https://greenfarm.example.com"
+        },
+        {
+            "name": "Coffee Exports Co",
+            "image": "images/members/coffee-exports.jpg",
+            "membershipLevel": "Gold",
+            "address": "789 Coffee Street, Quevedo",
+            "phone": "(593) 5-345-6789",
+            "website": "https://coffeeexports.example.com"
+        },
+        {
+            "name": "Local Bank Ltd",
+            "image": "images/members/local-bank.jpg",
+            "membershipLevel": "Platinum",
+            "address": "321 Finance Ave, Quevedo",
+            "phone": "(593) 5-456-7890",
+            "website": "https://localbank.example.com"
         }
     ]
-
 }

@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Café Quevedo",
+        "address": "Av. 7 de Octubre 123, Quevedo",
+        "phone": "(593) 5-275-1234",
+        "website": "https://cafequevedo.com",
+        "image": "cafe-quevedo.jpg",
+        "membership": 3,
+        "info": "El mejor café de la región con ambiente acogedor."
+    },
+    {
+        "name": "Comercial Santiago",
+        "address": "Calle Bolívar 456, Quevedo",
+        "phone": "(593) 5-275-5678",
+        "website": "https://comercialsantiago.com",
+        "image": "comercial-santiago.jpg",
+        "membership": 2,
+        "info": "Distribuidora mayorista de productos de primera necesidad."
+    },
+    {
+        "name": "Ferretería El Constructor",
+        "address": "Av. June Guzmán 789, Quevedo",
+        "phone": "(593) 5-275-9012",
+        "website": "https://elconstructor.com",
+        "image": "ferreteria-constructor.jpg",
+        "membership": 2,
+        "info": "Todo en materiales de construcción y herramientas."
+    },
+    {
+        "name": "Farmacia San Carlos",
+        "address": "Calle 7 de Octubre 234, Quevedo",
+        "phone": "(593) 5-275-3456",
+        "website": "https://farmaciasancarlos.com",
+        "image": "farmacia-sancarlos.jpg",
+        "membership": 1,
+        "info": "Medicamentos y productos de salud 24/7."
+    },
+    {
+        "name": "Hotel Olímpico",
+        "address": "Av. Walter Andrade 567, Quevedo",
+        "phone": "(593) 5-275-7890",
+        "website": "https://hotelolimpico.com",
+        "image": "hotel-olimpico.jpg",
+        "membership": 3,
+        "info": "El mejor hospedaje en el corazón de Quevedo."
+    },
+    {
+        "name": "Banco de Quevedo",
+        "address": "Calle San Agustín 890, Quevedo",
+        "phone": "(593) 5-275-1235",
+        "website": "https://bancodequevedo.com",
+        "image": "banco-quevedo.jpg",
+        "membership": 3,
+        "info": "Servicios financieros para empresas y particulares."
+    },
+    {
+        "name": "Supermercado La Familia",
+        "address": "Av. Central 123, Quevedo",
+        "phone": "(593) 5-275-4567",
+        "website": "https://superfamilia.com",
+        "image": "super-familia.jpg",
+        "membership": 2,
+        "info": "Productos frescos y precios competitivos."
+    }
+]
