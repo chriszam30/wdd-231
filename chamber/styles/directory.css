@@ -148,6 +148,15 @@ nav {
     transform-origin: left;
 }
 
+.nav-list a.active {
+    color: var(--secondary-color);
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-list a.active::before {
+    transform: scaleX(1);
+}
+
 #menu-toggle {
     display: none;
     background: none;
