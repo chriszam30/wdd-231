@@ -7,6 +7,7 @@
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    z-index: 1;
 }
 
 .hero img {
@@ -36,6 +37,7 @@
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    z-index: 2;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -325,5 +327,34 @@
 
     .weather-temp {
         font-size: 2.5rem;
+    }
+}
+
+/* Ultra-small screens: fix layout for <330px */
+@media (max-width: 330px) {
+    .hero img {
+        height: 180px;
+    }
+    .hero-content {
+        padding: 0.5rem;
+    }
+    .hero-content h1 {
+        font-size: 1.1rem;
+    }
+    .hero-content p {
+        font-size: 0.7rem;
+    }
+    nav#main-nav {
+        z-index: 10;
+    }
+    .nav-list {
+        font-size: 0.8rem;
+        padding: 0.2rem;
+    }
+    header .logo span {
+        font-size: 0.8rem;
+    }
+    main {
+        padding: 0.2rem;
     }
 }
