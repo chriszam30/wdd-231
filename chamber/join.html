@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber Membership Join</title>
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Quevedo Chamber Logo" height="48">
+    </div>
+    <button id="menu-toggle" aria-label="Open Menu">
+      <img src="images/burger-menu.svg" alt="Menu">
+    </button>
+  </header>
+  <nav id="main-nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Membership</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="join-main">
+    <section class="join-form-section">
+      <h1>Join the Chamber</h1>
+      <form id="joinForm" method="get" action="thankyou.html" autocomplete="on">
+        <label>
+          First Name
+          <input type="text" name="firstName" title="First Name" required autocomplete="given-name">
+        </label>
+        <label>
+          Last Name
+          <input type="text" name="lastName" title="Last Name" required autocomplete="family-name">
+        </label>
+        <label>
+          Organizational Title
+          <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" placeholder="e.g. Marketing Manager">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" title="Email" required autocomplete="email" placeholder="example@email.com">
+        </label>
+        <label>
+          Mobile Phone
+          <input type="tel" name="mobile" title="Mobile Phone" required autocomplete="tel">
+        </label>
+        <label>
+          Business/Organization Name
+          <input type="text" name="organization" title="Organization Name" required autocomplete="organization">
+        </label>
+        <label>
+          Membership Level
+          <select name="membership" title="Membership Level" required>
+            <option value="np">NP Membership (Non-Profit)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+        <label>
+          Business/Organization Description
+          <textarea name="description" title="Business Description" rows="3"></textarea>
+        </label>
+        <input type="hidden" name="timestamp" id="timestamp">
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+    <aside class="membership-cards">
+      <div class="membership-card" id="np-card">
+        <h2>NP Membership</h2>
+        <a href="#np-modal" class="modal-link">See Benefits</a>
+      </div>
+      <div class="membership-card" id="bronze-card">
+        <h2>Bronze Membership</h2>
+        <a href="#bronze-modal" class="modal-link">See Benefits</a>
+      </div>
+      <div class="membership-card" id="silver-card">
+        <h2>Silver Membership</h2>
+        <a href="#silver-modal" class="modal-link">See Benefits</a>
+      </div>
+      <div class="membership-card" id="gold-card">
+        <h2>Gold Membership</h2>
+        <a href="#gold-modal" class="modal-link">See Benefits</a>
+      </div>
+    </aside>
+    <!-- Modals for membership benefits -->
+    <div id="np-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>NP Membership Benefits</h3>
+        <ul>
+          <li>No fee for non-profits</li>
+          <li>Access to community events</li>
+          <li>Basic directory listing</li>
+        </ul>
+      </div>
+    </div>
+    <div id="bronze-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Bronze Membership Benefits</h3>
+        <ul>
+          <li>All NP benefits</li>
+          <li>Discounted event tickets</li>
+          <li>Spotlight in newsletter</li>
+        </ul>
+      </div>
+    </div>
+    <div id="silver-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Silver Membership Benefits</h3>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Featured homepage listing</li>
+          <li>Free training sessions</li>
+        </ul>
+      </div>
+    </div>
+    <div id="gold-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Gold Membership Benefits</h3>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Premium advertising</li>
+          <li>Exclusive networking events</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <!-- ...existing footer from your template... -->
+  </footer>
+  <script src="scripts/join.js"></script>
+</body>
+</html>

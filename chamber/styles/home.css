@@ -1,4 +1,16 @@
-/* === RESET & BASE === */
+
+:root {
+	--primary-bg: #f0f9ff;
+	--primary-color: #1a4b55;
+	--accent: #e85d3f;
+	--accent-bg: #f7c87322;
+	--card-radius: 14px;
+	--card-shadow: 0 2px 12px #0001;
+	--btn-radius: 8px;
+	--btn-bg: #e85d3f;
+	--btn-bg-hover: #c94c2e;
+	--btn-color: #fff;
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -6,8 +18,8 @@
 }
 body {
 	font-family: 'Segoe UI', Arial, sans-serif;
-	background: #f0f9ff;
-	color: #1a4b55;
+	background: var(--primary-bg);
+	color: var(--primary-color);
 	line-height: 1.6;
 }
 
@@ -152,23 +164,55 @@ nav {
 .cta-button {
 	display: block;
 	margin: 0 auto;
-	background: #e85d3f;
-	color: white;
+	background: var(--btn-bg);
+	color: var(--btn-color);
 	padding: 0.6rem 1.2rem;
 	min-width: 120px;
 	max-width: 180px;
 	text-align: center;
 	text-decoration: none;
-	border-radius: 8px;
+	border-radius: var(--btn-radius);
 	font-weight: 600;
 	font-size: 1rem;
 	transition: background 0.2s;
 	border: none;
 	box-shadow: none;
 }
-.cta-button:hover {
-	background: #1a4b55;
+button,
+.membership-card button,
+.discover-card button {
+	background: var(--btn-bg);
+	color: var(--btn-color);
+	border: none;
+	border-radius: var(--btn-radius);
+	padding: 0.7rem 2rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-top: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
 	box-shadow: none;
+}
+.cta-button:hover {
+	background: var(--btn-bg-hover);
+	box-shadow: none;
+}
+button:hover,
+.membership-card button:hover,
+.discover-card button:hover {
+	background: var(--btn-bg-hover);
+}
+/* Card Unification */
+.membership-card, .discover-card {
+	background: #fff;
+	border-radius: var(--card-radius);
+	box-shadow: var(--card-shadow);
+	padding: 1.2rem 1rem 1.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: box-shadow 0.2s, transform 0.2s;
+}
 @keyframes heroFadeIn {
 	from {
 		opacity: 0;
@@ -178,7 +222,6 @@ nav {
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
 }
 
 /* === EVENTS === */

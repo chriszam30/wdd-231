@@ -1,0 +1,113 @@
+/* discover.css: grid and gallery for discover.html */
+
+.discover-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.visitor-message {
+  background: #f7c87322;
+  color: #1a4b55;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.discover-gallery {
+  display: grid;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 1.5rem;
+}
+
+@media (min-width: 641px) {
+  .discover-gallery {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1025px) {
+  .discover-gallery {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.discover-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.discover-card h2 {
+  color: #1a4b55;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.discover-card figure {
+  margin: 0 0 0.7rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.discover-card img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #0002;
+  transition: filter 0.3s, transform 0.3s;
+}
+@media (min-width: 641px) {
+  .discover-card img:hover {
+    filter: brightness(1.1) contrast(1.1) drop-shadow(0 0 8px #e85d3f44);
+    transform: scale(1.04) rotate(-1deg);
+  }
+}
+.discover-card address {
+  font-style: normal;
+  color: #1a4b55cc;
+  font-size: 0.98rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.discover-card p {
+  font-size: 1rem;
+  color: #1a4b55;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.discover-card button {
+  background: #e85d3f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.discover-card button:hover {
+  background: #c94c2e;
+}

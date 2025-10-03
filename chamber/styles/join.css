@@ -1,0 +1,143 @@
+/* join.css: styles for join.html */
+
+.join-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.join-form-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 2rem 1.5rem;
+  flex: 1 1 350px;
+  min-width: 300px;
+}
+
+.join-form-section h1 {
+  margin-bottom: 1.5rem;
+  color: #1a4b55;
+  font-size: 2rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #1a4b55;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid #b0b0b0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+form button[type="submit"] {
+  background: #e85d3f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button[type="submit"]:hover {
+  background: #c94c2e;
+}
+
+.membership-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 900px) {
+  .join-main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .membership-cards {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 2rem;
+    min-width: 300px;
+    max-width: 350px;
+  }
+}
+
+.membership-card {
+  background: #f7c87322;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardFadeIn 0.7s forwards;
+}
+#np-card { animation-delay: 0.1s; }
+#bronze-card { animation-delay: 0.3s; }
+#silver-card { animation-delay: 0.5s; }
+#gold-card { animation-delay: 0.7s; }
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.membership-card h2 {
+  color: #1a4b55;
+  margin-bottom: 0.7rem;
+}
+.membership-card a {
+  color: #e85d3f;
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  position: relative;
+  box-shadow: 0 4px 24px #0002;
+  animation: modalIn 0.3s;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.modal .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #e85d3f;
+  cursor: pointer;
+}

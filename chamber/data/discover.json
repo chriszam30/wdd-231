@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Parque Central Quevedo",
+    "image": "images/discover/parque-central.webp",
+    "address": "Av. Quito y Bolívar, Quevedo, Ecuador",
+    "description": "El corazón verde de la ciudad, ideal para paseos, eventos y actividades familiares.",
+    "link": "https://goo.gl/maps/centralparque"
+  },
+  {
+    "title": "Malecón Río Quevedo",
+    "image": "images/discover/malecon-rio.webp",
+    "address": "Malecón Eloy Alfaro, Quevedo, Ecuador",
+    "description": "Un paseo escénico junto al río, con áreas de descanso, juegos y gastronomía local.",
+    "link": "https://goo.gl/maps/maleconquevedo"
+  },
+  {
+    "title": "Universidad Técnica Estatal de Quevedo",
+    "image": "images/discover/uteq.webp",
+    "address": "Av. Quito km 1.5, Quevedo, Ecuador",
+    "description": "Centro académico de referencia en la región, con modernas instalaciones y vida estudiantil activa.",
+    "link": "https://www.uteq.edu.ec/"
+  },
+  {
+    "title": "Mercado Municipal",
+    "image": "images/discover/mercado.webp",
+    "address": "Calle Bolívar y 7 de Octubre, Quevedo, Ecuador",
+    "description": "El mejor lugar para conocer la cultura local y probar productos frescos de la zona.",
+    "link": "https://goo.gl/maps/mercadoquevedo"
+  },
+  {
+    "title": "Catedral San José",
+    "image": "images/discover/catedral.webp",
+    "address": "Av. June Guzmán y Bolívar, Quevedo, Ecuador",
+    "description": "Imponente iglesia con arquitectura moderna y centro de la vida religiosa local.",
+    "link": "https://goo.gl/maps/catedralquevedo"
+  },
+  {
+    "title": "Estadio 7 de Octubre",
+    "image": "images/discover/estadio.webp",
+    "address": "Av. Quito y 7 de Octubre, Quevedo, Ecuador",
+    "description": "Escenario de grandes eventos deportivos y conciertos en la ciudad.",
+    "link": "https://goo.gl/maps/estadioquevedo"
+  },
+  {
+    "title": "Museo Municipal",
+    "image": "images/discover/museo.webp",
+    "address": "Calle Bolívar y 10 de Agosto, Quevedo, Ecuador",
+    "description": "Espacio cultural que resguarda la historia y tradiciones de Quevedo.",
+    "link": "https://goo.gl/maps/museoquevedo"
+  },
+  {
+    "title": "Plaza Comercial Quevedo",
+    "image": "images/discover/plaza-comercial.webp",
+    "address": "Av. Quito y Eloy Alfaro, Quevedo, Ecuador",
+    "description": "Centro de compras y entretenimiento con tiendas, restaurantes y cine.",
+    "link": "https://goo.gl/maps/plazaquevedo"
+  }
+]
