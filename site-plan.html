@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Simpsons Website Project Plan</title>
+  <link rel="stylesheet" href="site-plan.css">
+  <style>
+    :root {
+      --main-yellow: #FFD90F;
+      --main-blue: #0096D6;
+      --main-gray: #f4f4f4;
+      --main-font: 'Roboto', Arial, sans-serif;
+      --heading-font: 'Luckiest Guy', cursive, sans-serif;
+    }
+    body {
+      background: var(--main-gray);
+      color: #222;
+      font-family: var(--main-font);
+      margin: 0;
+      padding: 0 1rem;
+    }
+    header {
+      background: var(--main-yellow);
+      color: var(--main-blue);
+      padding: 1.5rem 0 1rem 0;
+      text-align: center;
+      font-family: var(--heading-font);
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      border-bottom: 4px solid var(--main-blue);
+    }
+    h2 {
+      color: var(--main-blue);
+      font-family: var(--heading-font);
+      margin-top: 2rem;
+    }
+    section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0001;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      padding: 1.5rem 1.2rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    .colors {
+      display: flex;
+      gap: 2rem;
+      margin: 1rem 0;
+    }
+    .color-sample {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .yellow { background: var(--main-yellow); color: #222; }
+    .blue { background: var(--main-blue); color: #fff; }
+    .wireframes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .wireframe {
+      background: #fff;
+      border: 2px dashed var(--main-blue);
+      border-radius: 10px;
+      width: 260px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: #888;
+      position: relative;
+    }
+    .wireframe-title {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      color: var(--main-blue);
+      font-family: var(--heading-font);
+    }
+    @media (max-width: 700px) {
+      .wireframes { flex-direction: column; align-items: center; }
+      .wireframe { width: 95vw; height: 300px; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>The Simpsons Website Project Plan</header>
+  <section>
+    <h2>Site Name</h2>
+    <p><strong>Simpsons Fun Hub</strong></p>
+    <p>This name was chosen because it clearly communicates the playful and interactive nature of the site, centered around The Simpsons. It is memorable, fun, and directly related to the content.</p>
+    <p><em>Optional domain:</em> simpsonsfunhub.com</p>
+  </section>
+  <section>
+    <h2>Site Purpose</h2>
+    <p>The site provides a fun and interactive hub for Simpsons fans to discover random characters, quotes, and images using The Simpsons API. It aims to entertain users and let them explore the world of The Simpsons in a simple, engaging way.</p>
+  </section>
+  <section>
+    <h2>Scenarios</h2>
+    <ul>
+      <li>Which Simpsons character will I get if I click "Random"?</li>
+      <li>Can I find a funny quote from Homer or Bart?</li>
+      <li>How can I search for a specific character's information?</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Color Schema</h2>
+    <div class="colors">
+      <div class="color-sample yellow">Yellow<br>#FFD90F</div>
+      <div class="color-sample blue">Blue<br>#0096D6</div>
+    </div>
+    <ul>
+      <li><strong>Yellow (#FFD90F):</strong> Used for headers, highlights, and buttons.</li>
+      <li><strong>Blue (#0096D6):</strong> Used for navigation, accents, and important text.</li>
+      <li><strong>Gray (#f4f4f4):</strong> Used for background.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Typography</h2>
+    <ul>
+      <li><strong>Luckiest Guy</strong> (Google Font): Used for main headings and logo text.</li>
+      <li><strong>Roboto</strong> (Google Font): Used for body text and navigation.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Wireframe</h2>
+    <div class="wireframes">
+      <div class="wireframe">
+        <div class="wireframe-title">Mobile View</div>
+        <svg width="100%" height="360" viewBox="0 0 220 360">
+          <rect x="60" y="10" width="100" height="30" rx="8" fill="#FFD90F" stroke="#0096D6" stroke-width="2"/>
+          <text x="110" y="30" text-anchor="middle" font-size="13" fill="#0096D6">Logo</text>
+          <rect x="180" y="15" width="25" height="20" rx="4" fill="#0096D6"/>
+          <text x="192" y="30" font-size="10" fill="#fff">≡</text>
+          <rect x="20" y="55" width="180" height="80" rx="10" fill="#eee" stroke="#FFD90F" stroke-width="2"/>
+          <text x="110" y="95" text-anchor="middle" font-size="12" fill="#888">Character Card</text>
+          <rect x="20" y="145" width="180" height="40" rx="8" fill="#FFD90F" stroke="#0096D6" stroke-width="2"/>
+          <text x="110" y="170" text-anchor="middle" font-size="12" fill="#0096D6">Quote Section</text>
+          <rect x="20" y="200" width="180" height="30" rx="6" fill="#fff" stroke="#0096D6" stroke-width="2"/>
+          <text x="110" y="220" text-anchor="middle" font-size="11" fill="#0096D6">Search Bar</text>
+          <rect x="0" y="320" width="220" height="30" rx="8" fill="#0096D6"/>
+          <text x="110" y="340" text-anchor="middle" font-size="12" fill="#fff">Footer</text>
+        </svg>
+      </div>
+      <div class="wireframe">
+        <div class="wireframe-title">Desktop View</div>
+        <svg width="100%" height="360" viewBox="0 0 340 360">
+          <rect x="10" y="10" width="320" height="35" rx="10" fill="#FFD90F" stroke="#0096D6" stroke-width="2"/>
+          <text x="60" y="33" font-size="14" fill="#0096D6">Logo</text>
+          <rect x="110" y="15" width="200" height="25" rx="6" fill="#0096D6"/>
+          <text x="210" y="33" text-anchor="middle" font-size="12" fill="#fff">Navigation</text>
+          <rect x="20" y="60" width="200" height="120" rx="12" fill="#eee" stroke="#FFD90F" stroke-width="2"/>
+          <text x="120" y="120" text-anchor="middle" font-size="13" fill="#888">Character Card + Quote</text>
+          <rect x="230" y="60" width="90" height="120" rx="10" fill="#fff" stroke="#0096D6" stroke-width="2"/>
+          <text x="275" y="120" text-anchor="middle" font-size="12" fill="#0096D6">Search</text>
+          <rect x="10" y="320" width="320" height="30" rx="8" fill="#0096D6"/>
+          <text x="170" y="340" text-anchor="middle" font-size="13" fill="#fff">Footer</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
