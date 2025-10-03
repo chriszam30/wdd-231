@@ -1,5 +1,4 @@
-// discover.js
-// Load cards from JSON and handle visitor message
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Visitor message logic
