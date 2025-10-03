@@ -61,8 +61,13 @@ html, body {
     grid-template-areas:
       "card1 card2 card3 card4"
       "card5 card6 card7 card8";
-    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
   }
 }
 
