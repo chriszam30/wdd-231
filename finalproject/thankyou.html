@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - The Simpsons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+    <main>
+        <p>Your message has been sent. Here is the data you submitted:</p>
+        <pre id="form-data"></pre>
+    </main>
+    <footer>
+        <p>&copy; <span id="copyright-year">2025</span> Christopher Zambrano</p>
+    </footer>
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        const formDataContainer = document.getElementById('form-data');
+        const urlParams = new URLSearchParams(window.location.search);
+        let data = '';
+        for (const [key, value] of urlParams.entries()) {
+            data += `${key}: ${value}\n`;
+        }
+        formDataContainer.textContent = data;
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "name": "Homer Simpson",
+            "age": "39",
+            "occupation": "Nuclear Safety Inspector",
+            "status": "Alive"
+        },
+        {
+            "id": 2,
+            "name": "Marge Simpson",
+            "age": "36",
+            "occupation": "Housewife",
+            "status": "Alive"
+        },
+        {
+            "id": 3,
+            "name": "Bart Simpson",
+            "age": "10",
+            "occupation": "Student",
+            "status": "Alive"
+        },
+        {
+            "id": 4,
+            "name": "Lisa Simpson",
+            "age": "8",
+            "occupation": "Student",
+            "status": "Alive"
+        },
+        {
+            "id": 5,
+            "name": "Maggie Simpson",
+            "age": "1",
+            "occupation": "Baby",
+            "status": "Alive"
+        },
+        {
+            "id": 6,
+            "name": "Ned Flanders",
+            "age": "60",
+            "occupation": "Owner of Leftorium",
+            "status": "Alive"
+        },
+        {
+            "id": 7,
+            "name": "Mr. Burns",
+            "age": "104",
+            "occupation": "Nuclear Power Plant Owner",
+            "status": "Alive"
+        },
+        {
+            "id": 8,
+            "name": "Moe Szyslak",
+            "age": "55",
+            "occupation": "Bartender",
+            "status": "Alive"
+        },
+        {
+            "id": 9,
+            "name": "Apu Nahasapeemapetilon",
+            "age": "40",
+            "occupation": "Kwik-E-Mart Owner",
+            "status": "Alive"
+        },
+        {
+            "id": 10,
+            "name": "Krusty the Clown",
+            "age": "52",
+            "occupation": "TV Show Host",
+            "status": "Alive"
+        },
+        {
+            "id": 11,
+            "name": "Milhouse Van Houten",
+            "age": "10",
+            "occupation": "Student",
+            "status": "Alive"
+        },
+        {
+            "id": 12,
+            "name": "Chief Wiggum",
+            "age": "43",
+            "occupation": "Police Chief",
+            "status": "Alive"
+        },
+        {
+            "id": 13,
+            "name": "Ralph Wiggum",
+            "age": "8",
+            "occupation": "Student",
+            "status": "Alive"
+        },
+        {
+            "id": 14,
+            "name": "Principal Skinner",
+            "age": "46",
+            "occupation": "School Principal",
+            "status": "Alive"
+        },
+        {
+            "id": 15,
+            "name": "Waylon Smithers",
+            "age": "40",
+            "occupation": "Executive Assistant",
+            "status": "Alive"
+        }
+    ]
+}

@@ -1,0 +1,257 @@
+const API_URL = 'https://api.sampleapis.com/simpsons/episodes';
+
+// Object to store all episodes by season
+let episodesBySeason = {};
+let isLoading = false;
+
+// Create an episode card
+function createEpisodeCard(episode) {
+    const card = document.createElement('div');
+    card.className = 'episode-card';
+    
+    const content = `
+        <h3>${episode.name}</h3>
+        <div class="episode-info">
+            <p><strong>Episode:</strong> ${episode.episode}</p>
+            <p><strong>Air Date:</strong> ${formatDate(episode.air_date)}</p>
+        </div>
+        <p class="episode-description">${episode.description || 'No description available'}</p>
+    `;
+    
+    card.innerHTML = content;
+    return card;
+}
+
+// Format date to a readable string
+function formatDate(dateString) {
+    if (!dateString) return 'Unknown';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+// Filter and display episodes for a specific season
+function filterEpisodes(season) {
+    const container = document.getElementById('episodes-container');
+    container.innerHTML = '';
+    const seasonEpisodes = episodesBySeason[season];
+    if (seasonEpisodes) {
+        const seasonSection = document.createElement('div');
+        seasonSection.className = 'season-section';
+        seasonSection.id = `season-${season}`;
+
+        const seasonTitle = document.createElement('h2');
+        seasonTitle.textContent = `Season ${season}`;
+        seasonSection.appendChild(seasonTitle);alPages = 0;
+    }
+// Update the season filter dropdown
+function updateSeasonFilter() {
+    const seasonFilter = document.getElementById('season-filter');
+    seasonFilter.innerHTML = ''; // Clear existing options
+    
+    const seasons = Object.keys(episodesBySeason).sort((a, b) => parseInt(a) - parseInt(b));
+    
+    if (seasons.length > 0) {
+        seasons.forEach(season => {
+            const option = document.createElement('option');
+            option.value = season;
+            option.textContent = `Season ${season}`;
+            seasonFilter.appendChild(option);
+        });
+        
+        // Show the first season by default
+        filterEpisodes(seasons[0]);
+    }
+}
+
+// Fetch all episodes
+async function getAllEpisodes() {
+    const container = document.getElementById('episodes-container');
+    container.innerHTML = '<div class="loading">Loading episodes...</div>';
+    isLoading = true;
+
+        // Procesar todos los episodios
+        allPagesData.forEach(pageData => {
+            if (pageData && pageData.results) {
+                pageData.results.forEach(episode => {
+                    if (!episodesBySeason[episode.season]) {
+                        episodesBySeason[episode.season] = [];
+                    }
+                    episodesBySeason[episode.season].push(episode);
+                });
+            }
+        });
+
+        // Ordenar episodios dentro de cada temporada
+        Object.keys(episodesBySeason).forEach(season => {
+            episodesBySeason[season].sort((a, b) => a.episode_number - b.episode_number);
+        });
+
+        // Actualizar el selector de temporadas
+        updateSeasonFilter();
+        displayEpisodesBySeason();
+    } catch (error) {
+        console.error('Failed to fetch episodes:', error);
+        container.innerHTML = `
+            <div class="error-message">
+                <p>Failed to load episodes. Please try again later.</p>
+                <button onclick="getAllEpisodes()" class="retry-button">Try Again</button>
+            </div>`;
+    } finally {
+        isLoading = false;
+    }
+}
+
+async function fetchEpisodesPage(page) {
+    const response = await fetch(`${API_URL}?page=${page}`);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+}
+
+function displayEpisodesBySeason() {
+    const container = document.getElementById('episodes-container');
+    container.innerHTML = '';
+
+    // Crear el índice de temporadas
+    const seasonIndex = document.createElement('div');
+    seasonIndex.className = 'season-index';
+    seasonIndex.innerHTML = `
+        <h2>Seasons</h2>
+        <div class="season-buttons">
+            ${Object.keys(episodesBySeason)
+                .sort((a, b) => Number(a) - Number(b))
+                .map(season => `
+                    <button onclick="scrollToSeason(${season})" class="season-button">
+                        Season ${season}
+                    </button>
+                `).join('')}
+        </div>
+    `;
+    container.appendChild(seasonIndex);
+
+    // Crear secciones para cada temporada
+    Object.keys(episodesBySeason)
+        .sort((a, b) => Number(a) - Number(b))
+        .forEach(season => {
+            const seasonSection = document.createElement('section');
+            seasonSection.id = `season-${season}`;
+            seasonSection.className = 'season-section';
+
+            const seasonTitle = document.createElement('h2');
+            seasonTitle.className = 'season-title';
+            seasonTitle.textContent = `Season ${season}`;
+
+            const episodesGrid = document.createElement('div');
+            episodesGrid.className = 'episodes-grid';
+
+            episodesBySeason[season].forEach(episode => {
+                const episodeCard = createEpisodeCard(episode);
+                episodesGrid.appendChild(episodeCard);
+            });
+
+            seasonSection.appendChild(seasonTitle);
+            seasonSection.appendChild(episodesGrid);
+            container.appendChild(seasonSection);
+        });
+}
+
+function createEpisodeCard(episode) {
+    const card = document.createElement('div');
+    card.className = 'episode-card';
+
+    const image = episode.image_path ? 
+        `<img src="https://thesimpsonsapi.com${episode.image_path}" alt="${episode.name}" 
+         onerror="this.src='https://thesimpsonsapi.com/images/episode-placeholder.jpg';">` : 
+        '<div class="episode-placeholder"></div>';
+
+    card.innerHTML = `
+        ${image}
+        <h3>${episode.name}</h3>
+        <div class="episode-info">
+            <span class="episode-number">Episode ${episode.episode_number}</span>
+            <span class="air-date">${formatDate(episode.airdate)}</span>
+        </div>
+        <p class="synopsis">${episode.synopsis || 'No synopsis available.'}</p>
+    `;
+
+    return card;
+}
+
+function formatDate(dateString) {
+    if (!dateString) return 'Air date unknown';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+    });
+}
+
+function scrollToSeason(season) {
+    const seasonSection = document.getElementById(`season-${season}`);
+    if (seasonSection) {
+        seasonSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Iniciar la carga cuando el documento esté listo
+// Función para actualizar el filtro de temporadas
+function updateSeasonFilter() {
+    const seasonFilter = document.getElementById('season-filter');
+    const seasons = Object.keys(episodesBySeason).sort((a, b) => parseInt(a) - parseInt(b));
+    
+    seasons.forEach(season => {
+        const option = document.createElement('option');
+        option.value = season;
+        option.textContent = `Season ${season}`;
+        seasonFilter.appendChild(option);
+    });
+}
+
+// Función para filtrar y mostrar episodios
+function filterEpisodes(season) {
+    const container = document.getElementById('episodes-container');
+    container.innerHTML = '';
+
+    if (season === 'all') {
+        displayEpisodesBySeason();
+        return;
+    }
+
+    const seasonEpisodes = episodesBySeason[season];
+    if (seasonEpisodes) {
+        const seasonSection = document.createElement('div');
+        seasonSection.className = 'season-section';
+        seasonSection.id = `season-${season}`;
+
+        const seasonTitle = document.createElement('h2');
+        seasonTitle.textContent = `Season ${season}`;
+        seasonSection.appendChild(seasonTitle);
+
+        const episodesGrid = document.createElement('div');
+        episodesGrid.className = 'episodes-grid';
+
+        seasonEpisodes.forEach(episode => {
+            const episodeCard = createEpisodeCard(episode);
+            episodesGrid.appendChild(episodeCard);
+        });
+
+        seasonSection.appendChild(episodesGrid);
+        container.appendChild(seasonSection);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    getAllEpisodes();
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    
+    // Agregar el event listener para el filtro
+    document.getElementById('season-filter').addEventListener('change', (e) => {
+        filterEpisodes(e.target.value);
+    });
+});
